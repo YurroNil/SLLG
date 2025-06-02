@@ -1,0 +1,24 @@
+{
+"args_count": 3,
+
+"paths": {
+    "include": [
+        "../include",
+        "%PDT_I%"
+    ],
+
+    "lib": [
+        "../lib",
+        "%PDT_L%"
+    ],
+    "source_code": [
+        "../src"
+    ]
+},
+"arguments": {
+    "cmd_prefix" : "g++.exe -fexec-charset=utf-8 -g ",
+    "output" : " -o ../bin/SLLG.exe",
+    "lib_suffix" : [ "-std=c++23" ]
+}
+
+}
