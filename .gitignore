@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+#Others
+/.tools/
+/.tools/*
+.vscode
+/.vscode/*
+/bin/
+/bin/*
