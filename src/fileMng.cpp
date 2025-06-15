@@ -14,8 +14,12 @@ int FileMng::ExecuteCommand(const string& command) {
 // 递归收集所有源文件
 void FileMng::CollectSourceFiles(const fs::path& directory, PathArray& source_files) {
     for (const auto& entry : fs::recursive_directory_iterator(directory)) {
-        if (entry.is_regular_file() && entry.path().extension() == ".cpp") {
-            source_files.push_back(entry.path());
+        if (entry.is_regular_file() &&
+            // 收集cpp和c后缀的源文件
+            (entry.path().extension() == ".cpp" or
+            entry.path().extension() == ".c"))
+        {
+            source_files.push_back(entry.path()); 
         }
     }
 }
